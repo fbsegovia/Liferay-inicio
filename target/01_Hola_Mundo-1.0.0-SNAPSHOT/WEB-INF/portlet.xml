@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd" version="2.0">
+	<portlet>
+		<portlet-name>HolaMundo</portlet-name>
+		<display-name>01_Hola_Mundo</display-name>
+		<!-- Aqui se debe cambiar la terminación para dar COPIRIGTH a nuestrop proyecto -->
+		<portlet-class>com.digitalEmpleo.portlets.HolaMundoMVCPortlet</portlet-class>
+		<init-param>
+			<name>view-template</name>
+			<value>/view.jsp</value>
+		</init-param>
+		
+		<!-- Para añadir más portlets debe hacerse a mano e inicializarse AQUI... -->
+		<init-param>
+			<name>edit-template</name>
+			<value>/edit.jsp</value>
+		</init-param>
+		
+		<init-param>
+			<name>help-template</name>
+			<value>/help.jsp</value>
+		</init-param>
+		
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			
+			<!-- Para añadir más modos deben incluirse a CONTINUACION de esta FORMA para CADA MODO -->
+			<portlet-mode>EDIT</portlet-mode>
+			<!-- El modo EDIT son las PREFERNCIAS de Liferay -->
+			<portlet-mode>HELP</portlet-mode>
+			
+		</supports>
+		<portlet-info>
+			<title>01_Hola_Mundo</title>
+			<short-title>01_Hola_Mundo</short-title>
+			<keywords>01_Hola_Mundo</keywords>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>guest</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>power-user</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+	</portlet>
+</portlet-app>
